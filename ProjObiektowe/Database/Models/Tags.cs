@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace ProjObiektowe.Models
 {
-    public class Ingrediens
+    public class Tags
     {
         [Key]
-        public int IndredientId { get; set; }
+        public int TagId { get; set; }
 
-        public string IngredientName { get; set; }
+        public string TagName { get; set; }
 
-        public ICollection<RecipesIngrediens> RecipesIngrediens { get; set; }
+        public virtual ICollection<RecipesTags> RecipesTags { get; set; }
     }
 }

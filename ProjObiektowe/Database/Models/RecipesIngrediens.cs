@@ -6,7 +6,7 @@
 
         public Recipes Recipes { get; set; }
 
-        public int IngredientID { get; set; }
+        public int IngredientId { get; set; }
 
         public Ingrediens Ingrediens { get; set; }
 

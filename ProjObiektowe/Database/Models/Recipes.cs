@@ -20,8 +20,11 @@ namespace ProjObiektowe.Models
         public int NoOfPortions { get; set; }
 
         public string Description { get; set; }
+
+
         public virtual ICollection<RecipesIngrediens> RecipesIngrediens { get; set; }
-        public virtual ICollection<RecipesTag>RecipesTag { get; set; }
+
+        public virtual ICollection<RecipesTags>RecipesTags { get; set; }
 
 
     }
