@@ -9,8 +9,8 @@ using ProjObiektowe.Database;
 namespace ProjObiektowe.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20220705121033_test")]
-    partial class test
+    [Migration("20220706092331_RecipesMigration")]
+    partial class RecipesMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,7 +38,7 @@ namespace ProjObiektowe.Migrations
 
             modelBuilder.Entity("ProjObiektowe.Models.Recipes", b =>
                 {
-                    b.Property<int>("RecepieID")
+                    b.Property<int>("RecipeId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -50,15 +50,15 @@ namespace ProjObiektowe.Migrations
                     b.Property<int>("NoOfPortions")
                         .HasColumnType("int");
 
-                    b.Property<string>("RecepieIngriedients")
+                    b.Property<string>("RecipeIngriedients")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("RecepieTitle")
+                    b.Property<string>("RecipeTitle")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("RecepieID");
+                    b.HasKey("RecipeId");
 
                     b.ToTable("Recipes");
                 });

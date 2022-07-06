@@ -11,11 +11,11 @@ namespace ProjObiektowe.Models
 
     {
         [Key]
-        public int RecepieID { get; set; }
+        public int RecipeId { get; set; }
         
-        public string RecepieTitle { get; set; }
+        public string RecipeTitle { get; set; }
 
-        public string RecepieIngriedients { get; set; }
+        public string RecipeIngriedients { get; set; }
 
         public int NoOfPortions { get; set; }
 

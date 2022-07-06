@@ -36,7 +36,7 @@ namespace ProjObiektowe.Migrations
 
             modelBuilder.Entity("ProjObiektowe.Models.Recipes", b =>
                 {
-                    b.Property<int>("RecepieID")
+                    b.Property<int>("RecipeId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -48,15 +48,15 @@ namespace ProjObiektowe.Migrations
                     b.Property<int>("NoOfPortions")
                         .HasColumnType("int");
 
-                    b.Property<string>("RecepieIngriedients")
+                    b.Property<string>("RecipeIngriedients")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("RecepieTitle")
+                    b.Property<string>("RecipeTitle")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("RecepieID");
+                    b.HasKey("RecipeId");
 
                     b.ToTable("Recipes");
                 });

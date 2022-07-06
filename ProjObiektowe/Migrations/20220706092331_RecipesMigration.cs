@@ -2,7 +2,7 @@
 
 namespace ProjObiektowe.Migrations
 {
-    public partial class test : Migration
+    public partial class RecipesMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -23,16 +23,16 @@ namespace ProjObiektowe.Migrations
                 name: "Recipes",
                 columns: table => new
                 {
-                    RecepieID = table.Column<int>(type: "int", nullable: false)
+                    RecipeId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    RecepieTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RecepieIngriedients = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RecipeTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RecipeIngriedients = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NoOfPortions = table.Column<int>(type: "int", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Recipes", x => x.RecepieID);
+                    table.PrimaryKey("PK_Recipes", x => x.RecipeId);
                 });
 
             migrationBuilder.CreateTable(
@@ -68,7 +68,7 @@ namespace ProjObiektowe.Migrations
                         name: "FK_RecipesIngrediens_Recipes_RecipeId",
                         column: x => x.RecipeId,
                         principalTable: "Recipes",
-                        principalColumn: "RecepieID",
+                        principalColumn: "RecipeId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -86,7 +86,7 @@ namespace ProjObiektowe.Migrations
                         name: "FK_RecipesTags_Recipes_RecipeId",
                         column: x => x.RecipeId,
                         principalTable: "Recipes",
-                        principalColumn: "RecepieID",
+                        principalColumn: "RecipeId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_RecipesTags_Tags_TagId",
