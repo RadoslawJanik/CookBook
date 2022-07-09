@@ -2,7 +2,7 @@
 
 namespace ProjObiektowe.Migrations
 {
-    public partial class RecipesMigration : Migration
+    public partial class test2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

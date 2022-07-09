@@ -107,9 +107,9 @@ namespace ProjObiektowe.Commands
 
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw e;
             }
         }
 

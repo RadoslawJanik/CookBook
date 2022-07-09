@@ -12,8 +12,8 @@ namespace ProjObiektowe.Models
         [Key]
         public int IngredientId { get; set; }
 
-        public string IngredientName { get; set; }
+        public string? IngredientName { get; set; }
 
-        public ICollection<RecipesIngrediens> RecipesIngrediens { get; set; }
+        public ICollection<RecipesIngrediens>? RecipesIngrediens { get; set; }
     }
 }

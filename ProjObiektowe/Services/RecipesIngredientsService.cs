@@ -39,7 +39,7 @@ namespace ProjObiektowe.Services
             catch (Exception e)
             {
 
-                throw e;
+                throw;
             }
         }
         /// <summary>

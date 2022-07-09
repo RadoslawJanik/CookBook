@@ -12,8 +12,8 @@ namespace ProjObiektowe.Models
         [Key]
         public int TagId { get; set; }
 
-        public string TagName { get; set; }
+        public string? TagName { get; set; }
 
-        public virtual ICollection<RecipesTags> RecipesTags { get; set; }
+        public virtual ICollection<RecipesTags>? RecipesTags { get; set; }
     }
 }

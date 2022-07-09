@@ -13,18 +13,18 @@ namespace ProjObiektowe.Models
         [Key]
         public int RecipeId { get; set; }
         
-        public string RecipeTitle { get; set; }
+        public string? RecipeTitle { get; set; }
 
-        public string RecipeIngriedients { get; set; }
+        public string? RecipeIngriedients { get; set; }
 
         public int NoOfPortions { get; set; }
 
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
 
-        public virtual ICollection<RecipesIngrediens> RecipesIngrediens { get; set; }
+        public virtual ICollection<RecipesIngrediens>? RecipesIngrediens { get; set; }
 
-        public virtual ICollection<RecipesTags>RecipesTags { get; set; }
+        public virtual ICollection<RecipesTags>? RecipesTags { get; set; }
 
 
     }

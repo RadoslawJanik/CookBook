@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,10 +25,6 @@ namespace ProjObiektowe
             InitializeComponent();
         }
 
-        private void Ok(object sender, RoutedEventArgs e)
-        {
-
-            Trace.WriteLine("Its ok");
-        }
+      
     }
 }

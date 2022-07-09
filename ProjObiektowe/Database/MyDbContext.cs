@@ -12,8 +12,8 @@ namespace ProjObiektowe.Database
     {   
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=LAPTOP-UGLSJC1Q;database=CookBook;trusted_connection=true;");
-                base.OnConfiguring(optionsBuilder);
+            optionsBuilder.UseSqlite(@"Data Source=db.sqlite");
+            base.OnConfiguring(optionsBuilder);
         }
 
         public DbSet<Recipes> Recipes { get; set; }
@@ -22,7 +22,7 @@ namespace ProjObiektowe.Database
 
         public DbSet<RecipesTags> RecipesTags { get; set; }
 
-        public DbSet<RecipesIngrediens> RecipesIngrediens { get; set; }
+        public DbSet<RecipesIngrediens>? RecipesIngrediens { get; set; }
 
         public DbSet<Ingrediens> Ingrediens { get; set; }
 

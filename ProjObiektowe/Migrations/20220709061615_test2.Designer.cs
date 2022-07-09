@@ -9,8 +9,8 @@ using ProjObiektowe.Database;
 namespace ProjObiektowe.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20220706092331_RecipesMigration")]
-    partial class RecipesMigration
+    [Migration("20220709061615_test2")]
+    partial class test2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
